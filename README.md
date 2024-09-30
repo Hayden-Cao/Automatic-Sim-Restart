@@ -110,6 +110,30 @@ After running this script you should see:
 RViz2 will also open on your computer  
 ![image](https://github.com/user-attachments/assets/e3505176-7fb8-43f1-904a-f9ce0a8bdcdb)
 
+## 3) Use tmux kill-session and Ctrl + C to exit when finished
+
+```bash
+tmux kill-session
+```
+
+![image](https://github.com/user-attachments/assets/91ed0a2f-dc96-4598-b1f6-78dd7b05fa51)
+
+![image](https://github.com/user-attachments/assets/1b835b02-4f1d-4e89-b802-972b8557745e)
+
+You can also enter exit to go back to the bash terminal:
+```bash
+exit
+```
+
+![image](https://github.com/user-attachments/assets/cf8eeea2-b232-4a62-ba31-6c5af01241e2)
+
+## Extra Notes)
+
+**Make New Terminals:** Use "Ctrl + b" + "c" to create a new terminal using Tmux. This terminal will already be sourced and can run any ros2 command
+
+![image](https://github.com/user-attachments/assets/8cc8fc1f-d42e-4829-9dbc-67b98a70ef2a)
+
+
 
 
 
