@@ -23,8 +23,8 @@ The docker-compose.yml file will handle the mounting of our f1tenth_gym_ros fold
 
 ## 3) Run (and Close) the Docker containers using docker compose commands
 
-Command To Run for the First Time: docker compose up --build --detach
-Command To Run After Building: docker compose up --detach
+Command To Run for the First Time: docker compose up --build -d
+Command To Run After Building: docker compose up -d
 Closing Docker Containers: docker compose down
 
 # How to Use:
