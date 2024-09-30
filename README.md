@@ -38,7 +38,7 @@ Example:
 
 * If you have already run --build you can run: **docker compose up --detach**  
 
-* If containers are already running and you are getting errors due to that run: **docker compose down**   
+Note: To close containers run **docker compose down**
 
 ## 2) Enter scripts/run_sim.sh <node> 
 
