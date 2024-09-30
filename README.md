@@ -25,13 +25,36 @@ Closing Docker Containers: docker compose down
 
 # How to Use:
 
-## 1) Open up any terminal and go to bash and enter your f1tenth_gym_ros directory
+## Prereqs) Open up any terminal and go to bash and enter your f1tenth_gym_ros directory + Open up Docker Desktop.
 
 Example:
 
 ![image](https://github.com/user-attachments/assets/1b3893f5-2b06-459e-b0b8-c1a38289ee12)
 
-## 
+# NOVNC to Run Simulation: 
+
+## 1) Run the needed docker compose command to start the container
+
+If you are running this for the first time run: docker compose up --build --detach  
+
+The --build argument will make all the commands inside the DockerFile run which is needed for the first time you run this.  
+
+If you have already run --build you can run: docker compose up --detach  
+
+This is much quicker since it skips the build process but if you do not build at least once you may be missing some packages  
+
+If containers are already running and you are getting errors due to that run: docker compose down   
+
+This will close all containers running  
+
+## 2) Enter scripts/run_sim.sh <node> 
+
+<node> will be any node you want to run. Example of running wall_follow
+
+![image](https://github.com/user-attachments/assets/78623ffc-85c3-4ba0-915f-ba84758ecc96)
+
+
+# iGPU/NVIDIA to Run Simulation
 
 
 
