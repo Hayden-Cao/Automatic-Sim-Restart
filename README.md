@@ -37,15 +37,15 @@ Example:
 
 If you are running this for the first time run: **docker compose up --build --detach**
 
-The --build argument will make all the commands inside the DockerFile run which is needed for the first time you run this.  
+\tThe --build argument will make all the commands inside the DockerFile run which is needed for the first time you run this.  
 
 If you have already run --build you can run: **docker compose up --detach**  
 
-This is much quicker since it skips the build process but if you do not build at least once you may be missing some packages  
+\tThis is much quicker since it skips the build process but if you do not build at least once you may be missing some packages  
 
 If containers are already running and you are getting errors due to that run: **docker compose down**   
 
-This will close all containers running  
+\tThis will close all containers running  
 
 ## 2) Enter scripts/run_sim.sh <node> 
 
