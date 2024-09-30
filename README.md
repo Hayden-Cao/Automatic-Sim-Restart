@@ -34,30 +34,37 @@ Example:
 
 ## 1) Run the needed docker compose command to start the container
 
-* If you are running this for the first time run:
+If you are running this for the first time run to run all commands in the DockerFile and start containers:
 
 ```bash
 docker compose up --build --detach
 ```
 
-* If you have already run --build you can run: 
+If you have already run --build once you can run for a faster start: 
 ```bash
 docker compose up --detach
 ```
 
-Note: To close containers run: 
+To close containers run: 
 ```bash
 docker compose down
 ```
 
-## 2) Enter scripts/run_sim.sh <node> 
+## 2) Start the run_sim.sh script by running:
 
+```bash
+scripts/new_sim.sh <node>
+```
 <node> will be any node you want to run. Example of running wall_follow  
 
 Example of Step 1 and 2:  
 ![image](https://github.com/user-attachments/assets/49c7cf1e-b3b7-4f11-a27a-b78e00411dd7)
 
 ## 3) Use tmux kill-session and Ctrl + C to exit when finished
+
+```bash
+tmux kill-session
+```
 
 ![image](https://github.com/user-attachments/assets/91ed0a2f-dc96-4598-b1f6-78dd7b05fa51)
 
