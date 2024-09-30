@@ -8,7 +8,9 @@ This will work for simulations running on both NOVNC and the iGPU/NVIDIA launch 
 
 ## 1) Place a nodes and scripts folder inside your f1tenth_gym_ros folder on your local PC
 
-The nodes folder will hold all the nodes you want to run and the scripts folder can be downloaded from this repository and placed into your f1tenth_gym_ros folder
+The nodes folder will hold all the nodes you want to run and the scripts folder can be downloaded from this repository and placed into your f1tenth_gym_ros folder.  
+
+Node: If you are on an Arm MacBook (M1/M2 MacBook) replace the run_sim.sh script contents with the run_sim_for_arm_mac.sh script contents. Everything else works the same including the Dockerfile/docker-compose.yml (Tested on my M2 MacBook Air)
 
 ![image](https://github.com/user-attachments/assets/09ccb62a-164f-4086-a30e-f2edfbf667f0)
 
