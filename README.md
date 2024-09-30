@@ -1,5 +1,7 @@
 # Automatic Simulation Restart on Node Edit Scripts
 
+This will work for simulations running on both NOVNC and the iGPU/NVIDIA launch but there are slightly different steps that I explain below
+
 **Link to Video Demo:** https://youtu.be/zE94DPURdSI
 
 # Setup Steps:
