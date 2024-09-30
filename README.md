@@ -60,6 +60,11 @@ scripts/new_sim.sh <node>
 Example of Step 1 and 2:  
 ![image](https://github.com/user-attachments/assets/49c7cf1e-b3b7-4f11-a27a-b78e00411dd7)
 
+After running this script you should see:
+
+![image](https://github.com/user-attachments/assets/ea6cfedd-363b-4d47-8dbb-07c922291b72)
+
+
 ## 3) Use tmux kill-session and Ctrl + C to exit when finished
 
 ```bash
@@ -78,6 +83,12 @@ tmux kill-session
 
 # iGPU/NVIDIA to Run Simulation
 
+## 1) Run these 2 commands manually or through the setup_sim.sh script in the scripts folder above:
+
+```bash
+. ~/rocker_venv/bin/activate
+rocker --nvidia --x11 --volume .:/sim_ws/src/f1tenth_gym_ros --volume /mnt/c/Users/caoha/f1tenth_gym_ros/scripts:/sim_ws --volume /mnt/c/Users/caoha/f1tenth_gym_ros/nodes:/sim_ws/src/nodes -- f1tenth_gym_ros
+```
 
 
 
