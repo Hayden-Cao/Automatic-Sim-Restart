@@ -34,20 +34,44 @@ Example:
 
 ## 1) Run the needed docker compose command to start the container
 
-* If you are running this for the first time run: **docker compose up --build --detach**
+* If you are running this for the first time run:
 
-* If you have already run --build you can run: **docker compose up --detach**  
+```bash
+docker compose up --build --detach
+```
 
-Note: To close containers run **docker compose down**
+* If you have already run --build you can run: 
+```bash
+docker compose up --detach
+```
+
+Note: To close containers run: 
+```bash
+docker compose down
+```
 
 ## 2) Enter scripts/run_sim.sh <node> 
 
-<node> will be any node you want to run. Example of running wall_follow
+<node> will be any node you want to run. Example of running wall_follow  
 
-![image](https://github.com/user-attachments/assets/78623ffc-85c3-4ba0-915f-ba84758ecc96)
+Example of Step 1 and 2:  
+![image](https://github.com/user-attachments/assets/49c7cf1e-b3b7-4f11-a27a-b78e00411dd7)
 
+## 3) Use tmux kill-session and Ctrl + C to exit when finished
+
+![image](https://github.com/user-attachments/assets/91ed0a2f-dc96-4598-b1f6-78dd7b05fa51)
+
+![image](https://github.com/user-attachments/assets/1b835b02-4f1d-4e89-b802-972b8557745e)
+
+## Extra Notes)
+
+**Make New Terminals:** Use "Ctrl + b" + "c" to create a new terminal using Tmux. This terminal will already be sourced and can run any ros2 command
+
+![image](https://github.com/user-attachments/assets/8cc8fc1f-d42e-4829-9dbc-67b98a70ef2a)
 
 # iGPU/NVIDIA to Run Simulation
+
+
 
 
 
