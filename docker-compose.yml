@@ -25,12 +25,11 @@ services:
   sim:
     image: f1tenth_gym_ros
     build: ./
-    # mount scripts and nodes from host to container
-    # docker monitors these paths and updates the nodes in the container when changes are made from host
     volumes:
       - .:/sim_ws/src/f1tenth_gym_ros
       - ./scripts:/sim_ws
       - ./nodes:/sim_ws/src/nodes
+      #- ~/.tmux.conf:/root/.tmux.conf     **Uncomment if you want your .tmux.conf file in Docker Container
     environment:
       - DISPLAY=novnc:0.0
     networks:
