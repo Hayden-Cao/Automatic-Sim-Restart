@@ -64,8 +64,10 @@ After running this script you should see:
 
 ![image](https://github.com/user-attachments/assets/ea6cfedd-363b-4d47-8dbb-07c922291b72)
 
+## 3) Open http://localhost:8080/vnc_lite.html on an internet browser
 
-## 3) Use tmux kill-session and Ctrl + C to exit when finished
+
+## 4) Use tmux kill-session and Ctrl + C to exit when finished
 
 ```bash
 tmux kill-session
@@ -83,13 +85,30 @@ tmux kill-session
 
 # iGPU/NVIDIA to Run Simulation
 
-## 1) Run these 2 commands manually or through the setup_sim.sh script in the scripts folder above:
+## 1) Run these 2 commands manually or through the setup_sim.sh script in the scripts folder:
 
 ```bash
 . ~/rocker_venv/bin/activate
 rocker --nvidia --x11 --volume .:/sim_ws/src/f1tenth_gym_ros --volume /mnt/c/Users/caoha/f1tenth_gym_ros/scripts:/sim_ws --volume /mnt/c/Users/caoha/f1tenth_gym_ros/nodes:/sim_ws/src/nodes -- f1tenth_gym_ros
 ```
 
+## 2) Run the run_sim.sh script by running:
+
+```bash
+./run_sim.sh <node> rocker
+```
+
+<node> will be any node you want to run.  
+
+Example of running wall_follow  
+![image](https://github.com/user-attachments/assets/5a7e16c9-adbb-4713-a70a-9014ccb5fef4)
+
+After running this script you should see:  
+
+![image](https://github.com/user-attachments/assets/ea6cfedd-363b-4d47-8dbb-07c922291b72) 
+
+RViz2 will also open on your computer  
+![image](https://github.com/user-attachments/assets/e3505176-7fb8-43f1-904a-f9ce0a8bdcdb)
 
 
 
