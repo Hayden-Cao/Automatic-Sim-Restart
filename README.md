@@ -35,7 +35,7 @@ Example:
 
 ## 1) Run the needed docker compose command to start the container
 
-If you are running this for the first time run: **docker compose up --build --detach**
+* If you are running this for the first time run: **docker compose up --build --detach**
 
 &emsp;The --build argument will make all the commands inside the DockerFile run which is needed for the first time you run this.  
 
