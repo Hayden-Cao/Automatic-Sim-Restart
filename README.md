@@ -66,6 +66,9 @@ After running this script you should see:
 
 ## 3) Open http://localhost:8080/vnc_lite.html on an internet browser
 
+It should look like this:
+![image](https://github.com/user-attachments/assets/a8749640-184a-45bb-9e26-25ab4e45054a)
+
 
 ## 4) Use tmux kill-session and Ctrl + C to exit when finished
 
