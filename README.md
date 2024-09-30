@@ -89,9 +89,9 @@ tmux kill-session
 
 ```bash
 . ~/rocker_venv/bin/activate
-rocker --nvidia --x11 --volume .:/sim_ws/src/f1tenth_gym_ros --volume /mnt/c/Users/caoha/f1tenth_gym_ros/scripts:/sim_ws --volume /mnt/c/Users/caoha/f1tenth_gym_ros/nodes:/sim_ws/src/nodes -- f1tenth_gym_ros
+rocker --nvidia --x11 --volume .:/sim_ws/src/f1tenth_gym_ros --volume /mnt/c/Users/<YOUR_USER>/f1tenth_gym_ros/scripts:/sim_ws --volume /mnt/c/Users/<YOUR_USER>/f1tenth_gym_ros/nodes:/sim_ws/src/nodes -- f1tenth_gym_ros
 ```
-
+<YOUR_USER> is the user on your PC
 ## 2) Run the run_sim.sh script by running:
 
 ```bash
