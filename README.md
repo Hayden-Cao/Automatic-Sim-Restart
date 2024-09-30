@@ -25,8 +25,7 @@ Closing Docker Containers: docker compose down
 
 # How to Use:
 
-## Prereqs) Open up any terminal and go to bash and enter your f1tenth_gym_ros directory + Open up Docker Desktop.
-
+## Prereqs) Open Docker Desktop and Enter the f1tenth_gym_ros folder throught Bash/WSL
 Example:
 
 ![image](https://github.com/user-attachments/assets/1b3893f5-2b06-459e-b0b8-c1a38289ee12)
