@@ -58,8 +58,7 @@ else
             elif [ $# -eq 3 ]; then
                 ./new_terminal.sh $NODE1 $NODE2
             else
-                echo "No Node Found"
-                exit 1
+                ./new_terminal.sh
             fi
             last_mod_time="$current_mod_time"
         fi
