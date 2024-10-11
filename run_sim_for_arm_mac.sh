@@ -17,6 +17,7 @@ if [ "$ROCKER_FOUND" -eq 0 ]; then
     echo "Launching from NOvnc"
     current_mod_time=$(find nodes -type f -exec stat -f "%c" {} + | sort -n | tail -n 1)
     last_mod_time="$current_mod_time"
+    open http://localhost:8080/vnc_lite.html
     if [ $# -ne 0 ]; then
         docker exec -it f1tenth_gym_ros-sim-1 /bin/bash -c "./new_terminal.sh $NODE1 $NODE2"
     else
