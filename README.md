@@ -41,12 +41,12 @@ Example:
 If you are running this for the first time run to run all commands in the DockerFile and start containers:
 
 ```bash
-docker compose up --build --detach
+docker compose up --build -d
 ```
 
 If you have already run --build once you can run for a faster start: 
 ```bash
-docker compose up --detach
+docker compose up -d
 ```
 
 To close containers run: 
@@ -56,8 +56,13 @@ docker compose down
 
 ## 2) Start the run_sim.sh script by running:
 
+If the package and nodes have different names:
 ```bash
-scripts/new_sim.sh <node>
+scripts/new_sim.sh <your_package> <your_node>
+```
+If the package and node name are the same you only need to enter the name once:
+```bash
+scripts/new_sim.sh <your_node>
 ```
 <node> will be any node you want to run. Example of running wall_follow  
 
