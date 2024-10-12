@@ -6,7 +6,7 @@ This will work for simulations running on both NOVNC and the iGPU/NVIDIA launch 
 
 ### Setup Steps:
 
-## 1) Place a nodes and scripts folder inside your f1tenth_gym_ros folder on your local PC
+#### 1) Place a nodes and scripts folder inside your f1tenth_gym_ros folder on your local PC
 
 The nodes folder will hold all the nodes you want to run and the scripts folder can be downloaded from this repository and placed into your f1tenth_gym_ros folder.  
 
@@ -14,22 +14,22 @@ Node: If you are on an Arm MacBook (M1/M2 MacBook) replace the run_sim.sh script
 
 ![image](https://github.com/user-attachments/assets/09ccb62a-164f-4086-a30e-f2edfbf667f0)
 
-## 2) Copy and Paste the configurations from the DockerFile and docker-compose.yml 
+#### 2) Copy and Paste the configurations from the DockerFile and docker-compose.yml 
 
 The DockerFile is essentially unchanged but has an extra package called "bc" added to the apt-get install list. This "bc" package is needed in the watch scripts that we will use later.  
 The docker-compose.yml file will handle the mounting of our f1tenth_gym_ros folder to the docker container.
 
 ![image](https://github.com/user-attachments/assets/1e35ec7e-416f-4f0a-919f-c4504386f892)
 
-## 3) Run (and Close) the Docker containers using docker compose commands
+#### 3) Run (and Close) the Docker containers using docker compose commands
 
 Command To Run for the First Time: docker compose up --build -d
 Command To Run After Building: docker compose up -d
 Closing Docker Containers: docker compose down
 
-# How to Use:
+### How to Use:
 
-## Prereqs) Open Docker Desktop and Enter the f1tenth_gym_ros folder through Bash/WSL
+#### Prereqs) Open Docker Desktop and Enter the f1tenth_gym_ros folder through Bash/WSL
 Example:
 
 ![image](https://github.com/user-attachments/assets/1b3893f5-2b06-459e-b0b8-c1a38289ee12)
@@ -73,7 +73,7 @@ After running this script you should see:
 
 ![image](https://github.com/user-attachments/assets/ea6cfedd-363b-4d47-8dbb-07c922291b72)
 
-## 3) Open http://localhost:8080/vnc_lite.html on an internet browser
+#### 3) Open http://localhost:8080/vnc_lite.html on an internet browser
 
 It should look like this:
 ![image](https://github.com/user-attachments/assets/a8749640-184a-45bb-9e26-25ab4e45054a)
@@ -104,7 +104,7 @@ tmux kill-session
 rocker --nvidia --x11 --volume .:/sim_ws/src/f1tenth_gym_ros --volume /mnt/c/Users/<YOUR_USER>/f1tenth_gym_ros/scripts:/sim_ws --volume /mnt/c/Users/<YOUR_USER>/f1tenth_gym_ros/nodes:/sim_ws/src/nodes -- f1tenth_gym_ros
 ```
 <YOUR_USER> is the user on your PC
-## 2) Run the run_sim.sh script by running:
+#### 2) Run the run_sim.sh script by running:
 
 if the node and package name are different enter:
 ```bash
@@ -127,7 +127,7 @@ After running this script you should see:
 RViz2 will also open on your computer  
 ![image](https://github.com/user-attachments/assets/e3505176-7fb8-43f1-904a-f9ce0a8bdcdb)
 
-## 3) Use tmux kill-session and Ctrl + C to exit when finished
+#### 3) Use tmux kill-session and Ctrl + C to exit when finished
 
 ```bash
 tmux kill-session
@@ -144,7 +144,7 @@ exit
 
 ![image](https://github.com/user-attachments/assets/cf8eeea2-b232-4a62-ba31-6c5af01241e2)
 
-## Extra Notes)
+#### Extra Notes)
 
 **Make New Terminals:** Use "Ctrl + b" + "c" to create a new terminal using Tmux. This terminal will already be sourced and can run any ros2 command
 
