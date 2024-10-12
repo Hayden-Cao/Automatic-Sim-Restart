@@ -1,10 +1,10 @@
-# Automatic Simulation Restart on Node Edit Scripts
+## Automatic Simulation Restart on Node Edit Scripts 
 
-This will work for simulations running on both NOVNC and the iGPU/NVIDIA launch but there are slightly different steps that I explain below
+This will work for simulations running on both NOVNC and the iGPU/NVIDIA launch using rocker but there are slightly different steps that I explain below. 
 
 **Link to Video Demo:** https://youtu.be/zE94DPURdSI
 
-# Setup Steps:
+### Setup Steps:
 
 ## 1) Place a nodes and scripts folder inside your f1tenth_gym_ros folder on your local PC
 
@@ -34,9 +34,9 @@ Example:
 
 ![image](https://github.com/user-attachments/assets/1b3893f5-2b06-459e-b0b8-c1a38289ee12)
 
-# NOVNC to Run Simulation: 
+### NOVNC to Run Simulation: 
 
-## 1) Run the needed docker compose command to start the container
+#### 1) Run the needed docker compose command to start the container
 
 If you are running this for the first time run to run all commands in the DockerFile and start containers:
 
@@ -54,7 +54,7 @@ To close containers run:
 docker compose down
 ```
 
-## 2) Start the run_sim.sh script by running:
+#### 2) Start the run_sim.sh script by running:
 
 If the package and nodes have different names:
 ```bash
@@ -79,7 +79,7 @@ It should look like this:
 ![image](https://github.com/user-attachments/assets/a8749640-184a-45bb-9e26-25ab4e45054a)
 
 
-## 4) Use tmux kill-session and Ctrl + C to exit when finished
+#### 4) Use tmux kill-session and Ctrl + C to exit when finished
 
 ```bash
 tmux kill-session
@@ -89,15 +89,15 @@ tmux kill-session
 
 ![image](https://github.com/user-attachments/assets/1b835b02-4f1d-4e89-b802-972b8557745e)
 
-## Extra Notes)
+#### Extra Notes)
 
 **Make New Terminals:** Use "Ctrl + b" + "c" to create a new terminal using Tmux. This terminal will already be sourced and can run any ros2 command
 
 ![image](https://github.com/user-attachments/assets/8cc8fc1f-d42e-4829-9dbc-67b98a70ef2a)
 
-# iGPU/NVIDIA to Run Simulation
+### iGPU/NVIDIA to Run Simulation
 
-## 1) Run these 2 commands manually or through the setup_sim.sh script in the scripts folder:
+#### 1) Run these 2 commands manually or through the setup_sim.sh script in the scripts folder:
 
 ```bash
 . ~/rocker_venv/bin/activate
@@ -106,6 +106,11 @@ rocker --nvidia --x11 --volume .:/sim_ws/src/f1tenth_gym_ros --volume /mnt/c/Use
 <YOUR_USER> is the user on your PC
 ## 2) Run the run_sim.sh script by running:
 
+if the node and package name are different enter:
+```bash
+./run_sim.sh <package> <node> rocker
+```
+If the node and package name are the same enter: 
 ```bash
 ./run_sim.sh <node> rocker
 ```
